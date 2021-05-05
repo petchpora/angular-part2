@@ -1,0 +1,39 @@
+.title{
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    width: 300px;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.header {
+    color:darkgreen;
+}
+
+.selected{
+    background-color: rgb(134, 235, 129);
+}
+
+li {
+    position: relative;
+    padding: 3px 8px 3px 40px;
+    list-style-type: none;
+    font-size: 16px;
+    transition: 0.15s;
+}
+
+li:hover{
+    background-color: lightgreen;
+}
+
+.inputBox{
+    width: 290px;
+}
+
+.show {
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}

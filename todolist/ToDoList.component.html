@@ -1,0 +1,52 @@
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<!-- google font -->
+
+
+<body>
+<h2 class="header">My tasks today</h2>
+    <div>
+        <h4 class="title">Add task</h4>
+        <div>
+            <span>Topic:</span>  
+            <input class="inputBox" placeholder="Type here ^^" [(ngModel)]="newToDo" />
+            <span>Description:</span>  
+            <input class="inputBox" [(ngModel)]="newDetail" /><p></p>
+            <button class="btn btn-primary btn-sm" (click)="addTask(newToDo,newDetail)">Add</button>
+        </div>
+        <br>
+
+        <div>
+            <h4 class="title">Selected task</h4>
+            <p>
+                Selected task:
+            </p>
+            <p class="show">
+                {{showname}}</p>
+            <p>
+                Description:
+            </p>
+            <p class="show">
+                {{showdetail}}
+            </p>
+        </div>
+        <div>
+        <h4 class="title">Todo tasks list</h4>
+            <li *ngFor="let dolist of toTask">
+                <button  
+                class="btn btn-link" 
+                title={{dolist.description}} 
+                (click)="showselected(dolist)">
+                {{dolist.name}}</button>
+
+                <button  
+                class="btn btn-secondary btn-sm" 
+                style="position: absolute; right: 0;" 
+                (click)="delTask(dolist)">
+                X</button>
+            </li>
+        </div>
+    </div>
+</body>
